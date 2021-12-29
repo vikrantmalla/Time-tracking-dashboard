@@ -1,0 +1,22 @@
+/*Primary*/
+
+$ColorBlue: hsl(246, 80%, 60%);
+$ColorLightred: hsl(15, 100%, 70%);
+$ColorSoftblue: hsl(195, 74%, 62%);
+$ColorLightred: hsl(348, 100%, 68%);
+$ColorLimegreen: hsl(145, 58%, 55%);
+$ColorViolet: hsl(264, 64%, 52%);
+$ColorSoftorange: hsl(43, 84%, 65%);
+
+/*Neutral*/
+
+$ColorVerydarkblue: hsl(226, 43%, 10%);
+$ColorDarkblue: hsl(235, 46%, 20%);
+$ColorDesaturatedblue: hsl(235, 45%, 61%);
+$ColorPaleBlue: hsl(236, 100%, 87%);
+@mixin flex($direction, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center;
+}

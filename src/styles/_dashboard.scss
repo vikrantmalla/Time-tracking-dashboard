@@ -1,0 +1,203 @@
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+        gap: 1.5rem;
+        padding: 0 1rem;
+        header {
+            background-color: $ColorDarkblue;
+            border-radius: .7rem;
+            .user-hero {
+                @include flex(row, center);
+                background-color: $ColorBlue;
+                padding: 1.5rem 2rem;
+                border-radius: .7rem;
+                gap: 1rem;
+                img {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    border: 2px solid #fff;
+                    border-radius: 50%;
+                }
+                .user-info {
+                    p {
+                        font-size: .8rem;
+                        color: $ColorPaleBlue;
+                        margin-bottom: .4rem;
+                        font-size: 400;
+                    }
+                    h2 {
+                        font-size: 1.5rem;
+                        font-weight: 300;
+                        color: white;
+                    }
+                }
+            }
+            .time-options {
+                @include flex(row, space-around);
+                button {
+                    padding: 1rem;
+                    border: none;
+                    background-color: transparent;
+                    color: $ColorDesaturatedblue;
+                    font-size: 1rem;
+                }
+                .showing {
+                    color: white;
+                }
+            }
+        }
+        .card {
+            background-color: $ColorDarkblue;
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 2rem;
+            padding: 1rem 1.5rem;
+            position: relative;
+            gap: .5rem;
+            border-radius: .7rem;
+            &::before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                bottom: 2rem;
+                z-index: -1;
+                background-repeat: no-repeat;
+                background-position: top -0.5rem right 1rem;
+                border-radius: .7rem;
+            }
+            .card-head {
+                @include flex(row, space-between);
+                .card-title {
+                    font-size: 1.1rem;
+                    color: white;
+                    font-weight: 500;
+                }
+                img {
+                    justify-self: flex-end;
+                }
+            }
+            .card-info {
+                @include flex(row, space-between);
+                .current-hours {
+                    font-size: 2rem;
+                    color: white;
+                    font-weight: 300;
+                }
+                .previous-hours {
+                    font-size: .8rem;
+                    color: $ColorPaleBlue;
+                    font-weight: 400;
+                }
+            }
+        }
+        .Work::before {
+            background-color: $ColorLightred;
+            background-image: url(../images/icon-work.svg);
+        }
+        .Play::before {
+            background-color: $ColorSoftblue;
+            background-image: url(../images/icon-play.svg);
+        }
+        .Study::before {
+            background-color: $ColorLightred;
+            background-image: url(../images/icon-study.svg);
+        }
+        .Exercise::before {
+            background-color: $ColorLimegreen;
+            background-image: url(../images/icon-exercise.svg);
+        }
+        .Social::before {
+            background-color: $ColorViolet;
+            background-image: url(../images/icon-social.svg);
+        }
+        .Self::before {
+            background-color: $ColorSoftorange;
+            background-image: url(../images/icon-self-care.svg);
+        }
+    }
+    
+    @media (min-width: 42em) {
+        .grid {
+            .header {
+                grid-column: span 2;
+                .user-hero {
+                    @include flex(row, flex-start);
+                }
+            }
+        }
+    }
+    
+    @media (min-width: 62em) {
+        .grid {
+            grid-template-columns: repeat(4, 1fr);
+            padding: 0;
+            .header {
+                grid-column: unset;
+                grid-row: span 2;
+                .user-hero {
+                    @include flex(column, center);
+                    align-items: flex-start;
+                    padding: 1.5rem;
+                    .user-info {
+                        h2 {
+                            margin-bottom: 2rem;
+                        }
+                    }
+                }
+                .time-options {
+                    @include flex(column, space-around);
+                    align-items: flex-start;
+                    padding: 1.5rem;
+                }
+            }
+            .card {
+                gap: .1rem;
+                .card-info {
+                    @include flex(column, space-around);
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+    
+    @media (min-width: 87em) {
+        .grid {
+            margin-inline: 10%;
+            .header {
+                .user-hero {
+                    gap: 2rem;
+                    img {
+                        width: 4.5rem;
+                        height: 4.5rem;
+                    }
+                    .user-info {
+                        p {
+                            font-size: .8rem;
+                        }
+                        h2 {
+                            font-size: 2.2rem;
+                            margin-bottom: 3rem;
+                        }
+                    }
+                }
+                .time-options {
+                    font-size: 1.1rem;
+                }
+            }
+            .card {
+                margin-top: 3rem;
+                gap: 0;
+                &::before {
+                    bottom: 3rem;
+                    background-position: top -0.2rem right 1rem;
+                }
+                .card-info {
+                    .current-hours {
+                        font-size: 2.8rem;
+                    }
+                }
+            }
+        }
+    }
