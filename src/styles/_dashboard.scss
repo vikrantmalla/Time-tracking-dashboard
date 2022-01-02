@@ -67,6 +67,9 @@
                 background-position: top -0.5rem right 1rem;
                 border-radius: .7rem;
             }
+            &:hover {
+                background-color: $CardHover;
+            }
             .card-head {
                 @include flex(row, space-between);
                 .card-title {

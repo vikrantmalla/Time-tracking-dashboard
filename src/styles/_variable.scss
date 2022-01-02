@@ -14,9 +14,4 @@ $ColorVerydarkblue: hsl(226, 43%, 10%);
 $ColorDarkblue: hsl(235, 46%, 20%);
 $ColorDesaturatedblue: hsl(235, 45%, 61%);
 $ColorPaleBlue: hsl(236, 100%, 87%);
-@mixin flex($direction, $justify) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: center;
-}
+$CardHover: hsl(236, 45%, 35%);
