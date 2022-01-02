@@ -29,7 +29,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/profile/vikrantmalla)
-- [Live Server](https://vercel.com/vikrantmalla/tracking-dashboard/3iG6LUDiXXSd3S75dJwYjKn6tBau)
+- [Live Server](https://tracking-dashboard-qzcjncfcm-vikrantmalla.vercel.app/)
 
 ### Built with
 
